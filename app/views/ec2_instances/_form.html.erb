@@ -1,0 +1,22 @@
+<%= form_with(model: ec2_instance) do |form| %>
+  <% if ec2_instance.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ec2_instance.errors.count, "error") %> prohibited this ec2_instance from being saved:</h2>
+
+      <ul>
+        <% ec2_instance.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :instance_id, style: "display: block" %>
+    <%= form.text_field :instance_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ec2 instances</h1>
+
+<div id="ec2_instances">
+  <% @ec2_instances.each do |ec2_instance| %>
+    <%= render ec2_instance %>
+    <p>
+      <%= link_to "Show this ec2 instance", ec2_instance %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ec2 instance", new_ec2_instance_path %>

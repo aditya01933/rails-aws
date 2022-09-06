@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "pages#home"
 
-  get "/up/", to: "up#index", as: :up
+  get "/sync/", to: "ec2_instances#sync", as: :ec2_instances
   get "/up/databases", to: "up#databases", as: :up_databases
 
   # Sidekiq has a web dashboard which you can enable below. It's turned off by

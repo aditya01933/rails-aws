@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ec2_instance %>
+
+<div>
+  <%= link_to "Edit this ec2 instance", edit_ec2_instance_path(@ec2_instance) %> |
+  <%= link_to "Back to ec2 instances", ec2_instances_path %>
+
+  <%= button_to "Destroy this ec2 instance", @ec2_instance, method: :delete %>
+</div>
